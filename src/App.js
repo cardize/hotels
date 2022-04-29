@@ -35,12 +35,12 @@ export default function App() {
                   </div>
                   <div clasname="info-container">
                     <div className="hotel-info">
-                      <h2 className="hotel-name">{item.first_name}</h2>
-                      <h2 className="hotel-point">{item.last_name}</h2>
+                      <h3 className="hotel-name">{item.hotel_name}</h3>
+                      <h3 className="hotel-point">{item.hotel_point} Puan</h3>
                     </div>
                     <div className="button-container">
-                      <button className="button">Puan Artır</button>
-                      <button className="button">Puan Azalt</button>
+                      <button className="button">PUAN ARTIR</button>
+                      <button className="button">PUAN AZALT</button>
                     </div>
                   </div>
                 </div>

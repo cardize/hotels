@@ -1,3 +1,8 @@
+div {
+  display: grid;
+  align-content: space-between;
+}
+
 .main-container {
   margin: 2rem;
   padding: 2rem;
@@ -44,13 +49,24 @@
 }
 
 .hotel-point {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  font-weight: normal;
+  width: 150px;
   border-radius: 3px;
-  border-radius: 3px;
-  background-color: rgba(244, 251, 249, 0.829);
+  color: rgb(58, 210, 224);
+  background-color: rgba(218, 223, 222, 0.829);
+}
+
+.hotel-name {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  font-weight: normal;
 }
 
 .info-container {
-  display: block;
+  display: grid;
+  align-content: space-between;
   border-radius: 3px;
   border: 1px solid rgb(0, 0, 0);
 }
@@ -61,11 +77,19 @@
   justify-content: center;
   align-items: center;
   border-radius: 3px;
-  border: 1px solid rgb(39, 43, 255);
 }
 
 .button-container :last-child {
   margin-left: 1rem;
+}
+
+.button {
+  width: 100px;
+  height: 30px;
+  color: rgb(7, 44, 255);
+  border-radius: 3px;
+  background-color: #fff;
+  border: 1px solid rgb(7, 44, 255);
 }
 
 img {

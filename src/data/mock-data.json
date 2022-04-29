@@ -1,212 +1,152 @@
 [
   {
     "id": 1,
-    "first_name": "Jessamyn",
-    "last_name": "Espinazo",
-    "email": "jespinazo0@chicagotribune.com",
-    "phone": "162-166-0977"
+    "hotel_name": "Voyage Hotel",
+    "hotel_point": 9.7
   },
   {
     "id": 2,
-    "first_name": "Isac",
-    "last_name": "Tooher",
-    "email": "itooher1@psu.edu",
-    "phone": "655-567-3619"
+    "hotel_name": "Max Royal Hotel",
+    "hotel_point": 8.3
   },
   {
     "id": 3,
-    "first_name": "Tabbatha",
-    "last_name": "Proschke",
-    "email": "tproschke2@weibo.com",
-    "phone": "327-612-4850"
+    "hotel_name": "Vogue Hotel",
+    "hotel_point": 7.5
   },
   {
     "id": 4,
-    "first_name": "Ninetta",
-    "last_name": "Mabb",
-    "email": "nmabb3@canalblog.com",
-    "phone": "971-296-0911"
+    "hotel_name": "Hotel Grand",
+    "hotel_point": 7.2
   },
   {
     "id": 5,
-    "first_name": "Danni",
-    "last_name": "Wallentin",
-    "email": "dwallentin4@comcast.net",
-    "phone": "983-297-0506"
+    "hotel_name": "Hotel Amour",
+    "hotel_point": 6.7
   },
   {
     "id": 6,
-    "first_name": "Neely",
-    "last_name": "Purkins",
-    "email": "npurkins5@mediafire.com",
-    "phone": "379-119-4237"
+    "hotel_name": "Hotel Royal",
+    "hotel_point": 6.7
   },
   {
     "id": 7,
-    "first_name": "Jessika",
-    "last_name": "Kinkaid",
-    "email": "jkinkaid6@eventbrite.com",
-    "phone": "771-888-6284"
+    "hotel_name": "Fly Hotel",
+    "hotel_point": 6.5
   },
   {
     "id": 8,
-    "first_name": "Julianna",
-    "last_name": "Swindall",
-    "email": "jswindall7@aol.com",
-    "phone": "252-614-0486"
+    "hotel_name": "Hotel Armada",
+    "hotel_point": 6.4
   },
   {
     "id": 9,
-    "first_name": "Corrinne",
-    "last_name": "Geeve",
-    "email": "cgeeve8@wisc.edu",
-    "phone": "450-872-8646"
+    "hotel_name": "Royal Hotel",
+    "hotel_point": 6.3
   },
   {
     "id": 10,
-    "first_name": "Trumann",
-    "last_name": "Flux",
-    "email": "tflux9@census.gov",
-    "phone": "249-892-1585"
+    "hotel_name": "Paradise Hotel",
+    "hotel_point": 6.2
   },
   {
     "id": 11,
-    "first_name": "Annalise",
-    "last_name": "Keinrat",
-    "email": "akeinrata@i2i.jp",
-    "phone": "659-283-4601"
+    "hotel_name": "Star Hotel",
+    "hotel_point": 6.1
   },
   {
     "id": 12,
-    "first_name": "Cal",
-    "last_name": "Haverson",
-    "email": "chaversonb@multiply.com",
-    "phone": "689-567-9516"
+    "hotel_name": "California Hotel",
+    "hotel_point": 6.0
   },
   {
     "id": 13,
-    "first_name": "Erik",
-    "last_name": "McGillivrie",
-    "email": "emcgillivriec@theglobeandmail.com",
-    "phone": "334-579-0995"
+    "hotel_name": "Erin Hotel",
+    "hotel_point": 5.9
   },
   {
     "id": 14,
-    "first_name": "Cherilyn",
-    "last_name": "Tuddenham",
-    "email": "ctuddenhamd@indiegogo.com",
-    "phone": "408-721-4575"
+    "hotel_name": "Hotel Angel",
+    "hotel_point": 5.8
   },
   {
     "id": 15,
-    "first_name": "Merola",
-    "last_name": "MacDowal",
-    "email": "mmacdowale@omniture.com",
-    "phone": "863-234-5628"
+    "hotel_name": "Marina Hotel",
+    "hotel_point": 5.7
   },
   {
     "id": 16,
-    "first_name": "Olenolin",
-    "last_name": "O'Shiels",
-    "email": "ooshielsf@smh.com.au",
-    "phone": "646-127-1652"
+    "hotel_name": "Paris Hotel",
+    "hotel_point": 5.6
   },
   {
     "id": 17,
-    "first_name": "Donnie",
-    "last_name": "Oliphant",
-    "email": "doliphantg@i2i.jp",
-    "phone": "975-457-5826"
+    "hotel_name": "Hotel Maxx",
+    "hotel_point": 5.5
   },
   {
     "id": 18,
-    "first_name": "Carly",
-    "last_name": "Bulleyn",
-    "email": "cbulleynh@fc2.com",
-    "phone": "938-211-6682"
+    "hotel_name": "Carly Hotel",
+    "hotel_point": 5.4
   },
   {
     "id": 19,
-    "first_name": "Walt",
-    "last_name": "Meace",
-    "email": "wmeacei@printfriendly.com",
-    "phone": "688-775-4039"
+    "hotel_name": "Normal Hotel",
+    "hotel_point": 5.3
   },
   {
     "id": 20,
-    "first_name": "Debbie",
-    "last_name": "Rockhall",
-    "email": "drockhallj@weebly.com",
-    "phone": "120-270-4052"
+    "hotel_name": "Hotel Hotel",
+    "hotel_point": 5.2
   },
   {
     "id": 21,
-    "first_name": "Devonna",
-    "last_name": "Oylett",
-    "email": "doylettk@jalbum.net",
-    "phone": "364-921-6359"
+    "hotel_name": "Devo Hotel",
+    "hotel_point": 5.1
   },
   {
     "id": 22,
-    "first_name": "Jourdan",
-    "last_name": "Grahamslaw",
-    "email": "jgrahamslawl@irs.gov",
-    "phone": "939-973-9940"
+    "hotel_name": "Hilton Hotel",
+    "hotel_point": 5.0
   },
   {
     "id": 23,
-    "first_name": "Brana",
-    "last_name": "Haste",
-    "email": "bhastem@typepad.com",
-    "phone": "142-349-6034"
+    "hotel_name": "Hiltoff Hotel",
+    "hotel_point": 4.9
   },
   {
     "id": 24,
-    "first_name": "Wilmer",
-    "last_name": "Trenouth",
-    "email": "wtrenouthn@netvibes.com",
-    "phone": "346-897-1305"
+    "hotel_name": "Tower Hotel",
+    "hotel_point": 4.8
   },
   {
     "id": 25,
-    "first_name": "Brandtr",
-    "last_name": "Esler",
-    "email": "beslero@wikispaces.com",
-    "phone": "638-763-4382"
+    "hotel_name": "Bright Hotel",
+    "hotel_point": 4.7
   },
   {
     "id": 26,
-    "first_name": "Andonis",
-    "last_name": "Durbin",
-    "email": "adurbinp@newyorker.com",
-    "phone": "531-854-8916"
+    "hotel_name": "Hotel Armania",
+    "hotel_point": 4.6
   },
   {
     "id": 27,
-    "first_name": "Cynthia",
-    "last_name": "How to preserve",
-    "email": "chowtopreserveq@de.vu",
-    "phone": "119-342-9726"
+    "hotel_name": "Hotel Miami",
+    "hotel_point": 4.5
   },
   {
     "id": 28,
-    "first_name": "Jennee",
-    "last_name": "Cowdroy",
-    "email": "jcowdroyr@marketwatch.com",
-    "phone": "804-307-6112"
+    "hotel_name": "Jen Hotel",
+    "hotel_point": 4.5
   },
   {
     "id": 29,
-    "first_name": "Lorin",
-    "last_name": "D'Hooghe",
-    "email": "ldhooghes@wix.com",
-    "phone": "374-113-9906"
+    "hotel_name": "Lorin Hotel",
+    "hotel_point": 4.4
   },
   {
     "id": 30,
-    "first_name": "Letti",
-    "last_name": "Acreman",
-    "email": "lacremant@ted.com",
-    "phone": "157-463-7705"
+    "hotel_name": "Hotel Maar",
+    "hotel_point": 4.3
   }
 ]
