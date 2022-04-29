@@ -1,0 +1,77 @@
+.main-container {
+  margin: 2rem;
+  padding: 2rem;
+  display: grid;
+  justify-items: center;
+  width: 500px;
+  border-radius: 3px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.hotels-container {
+  display: grid;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.hotels {
+  margin: 1rem;
+  padding: 1rem;
+  width: 400px;
+  display: -webkit-inline-box;
+  border-radius: 3px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.hotel-info {
+  margin-left: 1rem;
+  display: inline-table;
+  border-radius: 3px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.hotel-point {
+  border-radius: 3px;
+  border-radius: 3px;
+  background-color: rgba(244, 251, 249, 0.829);
+}
+
+.info-container {
+  display: block;
+  border-radius: 3px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.button-container {
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  border: 1px solid rgb(39, 43, 255);
+}
+
+.button-container :last-child {
+  margin-left: 1rem;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 1px;
+  border-radius: 3px;
+  border: 1px solid rgb(0, 0, 0);
+}
