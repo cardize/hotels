@@ -1,9 +1,14 @@
 import React, { useState, useMemo } from 'react'
 import Pagination from './Pagination'
 import data from './data/mock-data.json'
+import { useInput } from './hooks/useInput'
+import { useLocalStorage } from './hooks/useLocalStorage'
 import './app.scss'
 
 let PageSize = 5
+
+localStorage.setItem('hotels', JSON.stringify(data))
+const hotels = JSON.parse(window.localStorage.getItem('hotels'))
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState(1)
@@ -11,7 +16,7 @@ export default function App() {
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize
     const lastPageIndex = firstPageIndex + PageSize
-    return data.slice(firstPageIndex, lastPageIndex)
+    return hotels.slice(firstPageIndex, lastPageIndex) // hotels is the data from local storage
   }, [currentPage])
 
   return (
@@ -19,6 +24,10 @@ export default function App() {
       <div className="main-container">
         <div className="table">
           <div className="sort-container">
+            <div className="add-hotel">
+              <button>+</button>
+              <h2>Otel Ekle</h2>
+            </div>
             <div className="sort-container">
               <>SORT</>
             </div>
@@ -26,7 +35,7 @@ export default function App() {
           <div className="hotels-container">
             {currentTableData.map((item) => {
               return (
-                <div className="hotels" key={item.id}>
+                <div className="hotels">
                   <div className="defaul-image">
                     <img
                       src="https://i.pinimg.com/564x/d3/9d/5d/d39d5dee8e4ef35e6068304b8433a9d5.jpg"
