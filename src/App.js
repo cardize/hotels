@@ -12,10 +12,6 @@ const hotels = JSON.parse(window.localStorage.getItem('hotels'))
 
 console.log(hotels)
 
-const removeHotel = (id) => {
-  localStorage.removeItem('hotels', JSON.stringifyid(data.id))
-}
-
 export default function App() {
   const [currentPage, setCurrentPage] = useState(1)
 
@@ -42,10 +38,7 @@ export default function App() {
             {currentTableData.map((item) => {
               return (
                 <div className="hotels">
-                  <button
-                    className="remove-icon"
-                    onClick={removeHotel}
-                  ></button>
+                  <button type="button" className="remove-icon"></button>
                   <div className="defaul-image">
                     <img
                       src="https://i.pinimg.com/564x/d3/9d/5d/d39d5dee8e4ef35e6068304b8433a9d5.jpg"
