@@ -39,6 +39,24 @@ div {
   display: -webkit-inline-box;
   border-radius: 3px;
   border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  &:hover {
+    background-color: rgb(239, 239, 239);
+  }
+}
+
+.remove-icon {
+  display: none;
+}
+
+.hotels:hover .remove-icon {
+  display: block;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  border: none;
+  background-color: rgb(255, 0, 0);
 }
 
 .hotel-info {
