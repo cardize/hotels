@@ -28,6 +28,16 @@ h3 {
   border-radius: 3px;
 }
 
+.add-hotel {
+  width: 432px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  :last-child {
+    margin-left: 2rem;
+  }
+}
+
 .hotels-container {
   display: grid;
   align-items: center;
