@@ -1,16 +1,20 @@
 import { useState, useEffect } from 'react'
 import { useLocalStorage } from './useLocalStorage'
 
-export const useInput = (key, INITIAL_STATE) => {
-  const [storage, setStorage] = useLocalStorage(key, INITIAL_STATE)
-  const [inputs, setInputs] = useState(storage)
-
+export const useInput = (key, INITIAL_VALUE) => {
+  const [hotels, updateStorage] = useLocalStorage(key, INITIAL_VALUE)
+  const [inputs, setInputs] = useState(hotels)
   useEffect(() => {
-    setStorage(inputs)
+    updateStorage(inputs)
   }, [inputs])
 
-  const handleChange = (e) => {
-    setInputs({ ...inputs, [e.target.name]: e.target.value })
+  const handleChange = (hotelName) => {
+    const hotel = {
+      id: hotelName.length + 1,
+      hotel_name: hotelName,
+      hotel_point: 5.0,
+    }
+    setInputs({ ...hotels, [hotel.id]: hotel })
   }
 
   return [inputs, handleChange]

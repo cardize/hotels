@@ -28,11 +28,8 @@ export default function App() {
     setHotels([...hotels, hotel])
     console.log(hotels)
   }
-
   const descendingHotels = useMemo(() => {
-    return hotels.sort(
-      (a, b) => b.id - a.id || b.lastRatedDate - a.lastRatedDate,
-    )
+    return hotels.sort((a, b) => b.id - a.id)
   }, [hotels])
 
   const currentTableData = useMemo(() => {

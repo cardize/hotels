@@ -2,151 +2,181 @@
   {
     "id": 1,
     "hotel_name": "Voyage Hotel",
-    "hotel_point": 9.7
+    "hotel_point": 9.7,
+    "lastRatedDate": ""
   },
   {
     "id": 2,
     "hotel_name": "Max Royal Hotel",
-    "hotel_point": 8.3
+    "hotel_point": 8.3,
+    "lastRatedDate": ""
   },
   {
     "id": 3,
     "hotel_name": "Vogue Hotel",
-    "hotel_point": 7.5
+    "hotel_point": 7.5,
+    "lastRatedDate": ""
   },
   {
     "id": 4,
     "hotel_name": "Hotel Grand",
-    "hotel_point": 7.2
+    "hotel_point": 7.2,
+    "lastRatedDate": ""
   },
   {
     "id": 5,
     "hotel_name": "Hotel Amour",
-    "hotel_point": 6.7
+    "hotel_point": 6.7,
+    "lastRatedDate": ""
   },
   {
     "id": 6,
     "hotel_name": "Hotel Royal",
-    "hotel_point": 6.7
+    "hotel_point": 6.7,
+    "lastRatedDate": ""
   },
   {
     "id": 7,
     "hotel_name": "Fly Hotel",
-    "hotel_point": 6.5
+    "hotel_point": 6.5,
+    "lastRatedDate": ""
   },
   {
     "id": 8,
     "hotel_name": "Hotel Armada",
-    "hotel_point": 6.4
+    "hotel_point": 6.4,
+    "lastRatedDate": ""
   },
   {
     "id": 9,
     "hotel_name": "Royal Hotel",
-    "hotel_point": 6.3
+    "hotel_point": 6.3,
+    "lastRatedDate": ""
   },
   {
     "id": 10,
     "hotel_name": "Paradise Hotel",
-    "hotel_point": 6.2
+    "hotel_point": 6.2,
+    "lastRatedDate": ""
   },
   {
     "id": 11,
     "hotel_name": "Star Hotel",
-    "hotel_point": 6.1
+    "hotel_point": 6.1,
+    "lastRatedDate": ""
   },
   {
     "id": 12,
     "hotel_name": "California Hotel",
-    "hotel_point": 6.0
+    "hotel_point": 6.0,
+    "lastRatedDate": ""
   },
   {
     "id": 13,
     "hotel_name": "Erin Hotel",
-    "hotel_point": 5.9
+    "hotel_point": 5.9,
+    "lastRatedDate": ""
   },
   {
     "id": 14,
     "hotel_name": "Hotel Angel",
-    "hotel_point": 5.8
+    "hotel_point": 5.8,
+    "lastRatedDate": ""
   },
   {
     "id": 15,
     "hotel_name": "Marina Hotel",
-    "hotel_point": 5.7
+    "hotel_point": 5.7,
+    "lastRatedDate": ""
   },
   {
     "id": 16,
     "hotel_name": "Paris Hotel",
-    "hotel_point": 5.6
+    "hotel_point": 5.6,
+    "lastRatedDate": ""
   },
   {
     "id": 17,
     "hotel_name": "Hotel Maxx",
-    "hotel_point": 5.5
+    "hotel_point": 5.5,
+    "lastRatedDate": ""
   },
   {
     "id": 18,
     "hotel_name": "Carly Hotel",
-    "hotel_point": 5.4
+    "hotel_point": 5.4,
+    "lastRatedDate": ""
   },
   {
     "id": 19,
     "hotel_name": "Normal Hotel",
-    "hotel_point": 5.3
+    "hotel_point": 5.3,
+    "lastRatedDate": ""
   },
   {
     "id": 20,
     "hotel_name": "Hotel Hotel",
-    "hotel_point": 5.2
+    "hotel_point": 5.2,
+    "lastRatedDate": ""
   },
   {
     "id": 21,
     "hotel_name": "Devo Hotel",
-    "hotel_point": 5.1
+    "hotel_point": 5.1,
+    "lastRatedDate": ""
   },
   {
     "id": 22,
     "hotel_name": "Hilton Hotel",
-    "hotel_point": 5.0
+    "hotel_point": 5.0,
+    "lastRatedDate": ""
   },
   {
     "id": 23,
     "hotel_name": "Hiltoff Hotel",
-    "hotel_point": 4.9
+    "hotel_point": 4.9,
+    "lastRatedDate": ""
   },
   {
     "id": 24,
     "hotel_name": "Tower Hotel",
-    "hotel_point": 4.8
+    "hotel_point": 4.8,
+    "lastRatedDate": ""
   },
   {
     "id": 25,
     "hotel_name": "Bright Hotel",
-    "hotel_point": 4.7
+    "hotel_point": 4.7,
+    "lastRatedDate": ""
   },
   {
     "id": 26,
     "hotel_name": "Hotel Armania",
-    "hotel_point": 4.6
+    "hotel_point": 4.6,
+    "lastRatedDate": ""
   },
   {
     "id": 27,
     "hotel_name": "Hotel Miami",
-    "hotel_point": 4.5
+    "hotel_point": 4.5,
+    "lastRatedDate": ""
   },
   {
     "id": 28,
     "hotel_name": "Jen Hotel",
-    "hotel_point": 4.5
+    "hotel_point": 4.5,
+    "lastRatedDate": ""
   },
   {
     "id": 29,
     "hotel_name": "Lorin Hotel",
-    "hotel_point": 4.4
+    "hotel_point": 4.4,
+    "lastRatedDate": ""
   },
   {
     "id": 30,
     "hotel_name": "Hotel Maar",
-    "hotel_point": 4.3
+    "hotel_point": 4.3,
+    "lastRatedDate": ""
   }
 ]
