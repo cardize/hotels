@@ -50,8 +50,8 @@ export default function App() {
           </button>
           <h2>OTEL EKLE</h2>
         </div>
-        <div className="sort-container">
-          <>SORT</>
+        <div className="sort-hotel">
+          <>⇅ Sıralama</>
         </div>
         <div className="table">
           <div className="hotels-container">
