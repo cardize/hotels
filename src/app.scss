@@ -1,6 +1,11 @@
 div {
   display: grid;
+  justify-items: stretch;
   align-content: space-between;
+}
+
+h3 {
+  margin: 0;
 }
 
 .main-container {
@@ -9,6 +14,8 @@ div {
   margin: 0;
   padding: 0;
   display: grid;
+
+  align-content: space-between;
   justify-items: center;
   border-radius: 3px;
 }
@@ -19,7 +26,6 @@ div {
   justify-content: center;
   align-items: center;
   border-radius: 3px;
-  border: 1px solid rgb(0, 0, 0);
 }
 
 .hotels-container {
@@ -29,56 +35,44 @@ div {
   justify-content: center;
   align-items: center;
   border-radius: 3px;
-  border: 1px solid rgb(0, 0, 0);
 }
 
 .hotels {
-  margin: 1rem;
+  margin: 0.5rem;
   padding: 1rem;
   width: 400px;
   display: -webkit-inline-box;
   border-radius: 3px;
-  border: 1px solid rgb(0, 0, 0);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
   &:hover {
-    background-color: rgb(239, 239, 239);
+    background-color: rgba(239, 239, 239, 0.829);
   }
-}
-
-.remove-icon {
-  display: none;
-}
-
-.hotels:hover .remove-icon {
-  display: block;
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  border-radius: 100%;
-  border: none;
-  background-color: rgb(255, 0, 0);
 }
 
 .hotel-info {
   margin-left: 1rem;
   display: inline-table;
-  border-radius: 3px;
-  border: 1px solid rgb(0, 0, 0);
 }
 
 .hotel-point {
+  display: grid;
+  align-content: space-around;
+  justify-content: start;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: large;
   font-weight: normal;
+  text-indent: 15px;
+  height: 35px;
   width: 150px;
-  border-radius: 3px;
-  color: rgb(58, 210, 224);
-  background-color: rgba(218, 223, 222, 0.829);
+  border-radius: 5px;
+  color: rgb(68, 197, 209);
+  background-color: rgba(239, 239, 239, 0.829);
 }
 
 .hotel-name {
+  margin-bottom: 1rem;
+  font-size: 28px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: large;
   font-weight: normal;
 }
 
@@ -86,7 +80,6 @@ div {
   display: grid;
   align-content: space-between;
   border-radius: 3px;
-  border: 1px solid rgb(0, 0, 0);
 }
 
 .button-container {
@@ -104,10 +97,11 @@ div {
 .button {
   width: 100px;
   height: 30px;
-  color: rgb(7, 44, 255);
+  font-size: 14px;
+  color: rgb(48, 94, 202);
   border-radius: 3px;
   background-color: #fff;
-  border: 1px solid rgb(7, 44, 255);
+  border: 1px solid rgb(48, 94, 202);
   cursor: pointer;
   :hover {
     background-color: rgb(0, 255, 51);
@@ -118,7 +112,49 @@ div {
 img {
   width: 150px;
   height: 150px;
-  border-radius: 1px;
-  border-radius: 3px;
-  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+.remove-container {
+  width: 436px;
+  position: absolute;
+  align-items: end;
+  justify-items: flex-end;
+}
+
+.remove-button {
+  display: none;
+}
+
+.hotels:hover .remove-button {
+  display: grid;
+  align-content: end;
+  text-decoration: none;
+  position: absolute;
+  font-size: 35px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 100%;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.plus-button {
+  margin-top: 1rem;
+  font-size: 40px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgb(25, 0, 255);
+  border-radius: 5px;
+  background-color: #fff;
+  color: rgb(25, 0, 255);
+  cursor: pointer;
+  :hover {
+    border: 10px solid rgb(25, 0, 255);
+    color: #fff;
+  }
 }

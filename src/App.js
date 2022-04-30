@@ -44,22 +44,25 @@ export default function App() {
   return (
     <div>
       <div className="main-container">
+        <div className="add-hotel">
+          <button className="plus-button" type="button" onClick={addHotel}>
+            +
+          </button>
+          <h2>OTEL EKLE</h2>
+        </div>
+        <div className="sort-container">
+          <>SORT</>
+        </div>
         <div className="table">
-          <div className="sort-container">
-            <div className="add-hotel">
-              <button onClick={addHotel}>+</button>
-              <h2>Otel Ekle</h2>
-            </div>
-            <div className="sort-container">
-              <>SORT</>
-            </div>
-          </div>
           <div className="hotels-container">
             {currentTableData.map((item) => {
               return (
                 <div className="hotels" key={item.id}>
-                  <button type="button" className="remove-icon"></button>
                   <div className="defaul-image">
+                    <div className="remove-container">
+                      <button className="remove-button">x</button>
+                    </div>
+
                     <img
                       src="https://i.pinimg.com/564x/d3/9d/5d/d39d5dee8e4ef35e6068304b8433a9d5.jpg"
                       alt=""
