@@ -28,8 +28,11 @@ export default function App() {
     setHotels([...hotels, hotel])
     console.log(hotels)
   }
+
   const descendingHotels = useMemo(() => {
-    return hotels.sort((a, b) => b.id - a.id)
+    return hotels.sort(
+      (a, b) => b.id - a.id || b.lastRatedDate - a.lastRatedDate,
+    )
   }, [hotels])
 
   const currentTableData = useMemo(() => {
@@ -41,22 +44,84 @@ export default function App() {
   return (
     <div>
       <div className="main-container">
-        <div className="table">
-          <div className="sort-container">
-            <div className="add-hotel">
-              <button onClick={addHotel}>+</button>
-              <h2>Otel Ekle</h2>
+        <div className="add-hotel">
+          <button className="plus-button" type="button" onClick={addHotel}>
+            +
+          </button>
+          <h2>OTEL EKLE</h2>
+        </div>
+        <div className="sort-hotel">
+          <div className="select-box">
+            <div className="select-box__current" tabIndex="1">
+              <div className="select-box__value">
+                <input
+                  className="select-box__input"
+                  type="radio"
+                  id="0"
+                  value="1"
+                  name="Cardize"
+                  defaultChecked="defaulChecked"
+                />
+                <p className="select-box__input-text">⇅ Sıralama</p>
+              </div>
+              <div className="select-box__value">
+                <input
+                  className="select-box__input"
+                  type="radio"
+                  id="1"
+                  value="2"
+                  name="Cardize"
+                />
+                <p className="select-box__input-text">Artan (Puan)</p>
+              </div>
+              <div className="select-box__value">
+                <input
+                  className="select-box__input"
+                  type="radio"
+                  id="2"
+                  value="3"
+                  name="Cardize"
+                />
+                <p className="select-box__input-text">Azalan (Puan)</p>
+              </div>
+              <img
+                className="select-box__icon"
+                src="http://cdn.onlinewebfonts.com/svg/img_295694.svg"
+                alt="Arrow Icon"
+                aria-hidden="true"
+              />
             </div>
-            <div className="sort-container">
-              <>SORT</>
-            </div>
+            <ul className="select-box__list">
+              <li>
+                <label
+                  className="select-box__option"
+                  htmlFor="1"
+                  aria-hidden="aria-hidden"
+                >
+                  Artan (Puan)
+                </label>
+              </li>
+              <li>
+                <label
+                  className="select-box__option"
+                  htmlFor="2"
+                  aria-hidden="aria-hidden"
+                >
+                  Azalan (Puan)
+                </label>
+              </li>
+            </ul>
           </div>
+        </div>
+        <div className="table">
           <div className="hotels-container">
             {currentTableData.map((item) => {
               return (
                 <div className="hotels" key={item.id}>
-                  <button type="button" className="remove-icon"></button>
                   <div className="defaul-image">
+                    <div className="remove-container">
+                      <button className="remove-button">x</button>
+                    </div>
                     <img
                       src="https://i.pinimg.com/564x/d3/9d/5d/d39d5dee8e4ef35e6068304b8433a9d5.jpg"
                       alt=""
