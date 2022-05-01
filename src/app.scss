@@ -84,7 +84,7 @@ h3 {
   height: 35px;
   width: 150px;
   border-radius: 5px;
-  color: rgb(68, 197, 209);
+  color: rgb(40, 191, 204);
   background-color: rgba(239, 239, 239, 0.829);
 }
 
@@ -118,12 +118,12 @@ h3 {
   height: 30px;
   font-size: 14px;
   color: rgb(48, 94, 202);
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: #fff;
   border: 1px solid rgb(48, 94, 202);
   cursor: pointer;
-  :hover {
-    background-color: rgb(0, 255, 51);
+  &:hover {
+    background-color: rgb(48, 94, 202);
     color: #fff;
   }
 }
@@ -174,8 +174,8 @@ img {
   background-color: #fff;
   color: rgb(25, 0, 255);
   cursor: pointer;
-  :hover {
-    border: 10px solid rgb(25, 0, 255);
+  &:hover {
+    background-color: rgb(48, 94, 202);
     color: #fff;
   }
 }
