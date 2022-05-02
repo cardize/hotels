@@ -120,7 +120,7 @@ export default function App() {
                 <div className="hotels" key={item.id}>
                   <div className="defaul-image">
                     <div className="remove-container">
-                      <button className="remove-button">x</button>
+                      <button className="remove-button">+</button>
                     </div>
                     <img
                       src="https://i.pinimg.com/564x/d3/9d/5d/d39d5dee8e4ef35e6068304b8433a9d5.jpg"
