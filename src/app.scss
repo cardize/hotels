@@ -35,7 +35,7 @@ h3 {
   justify-content: flex-start;
   align-items: baseline;
   :last-child {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 }
 
@@ -167,12 +167,12 @@ img {
   margin-top: 1rem;
   font-size: 40px;
   font-family: 'Courier New', Courier, monospace;
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgb(25, 0, 255);
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgb(48, 94, 202);
   border-radius: 5px;
   background-color: #fff;
-  color: rgb(25, 0, 255);
+  color: rgb(48, 94, 202);
   cursor: pointer;
   &:hover {
     background-color: rgb(48, 94, 202);
