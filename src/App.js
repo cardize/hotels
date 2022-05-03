@@ -24,9 +24,9 @@ export default function App() {
   const addHotel = () => {
     const hotel = {
       id: id + 1,
-      hotel_name: 'test',
+      hotel_name: 'Test Hotel',
       hotel_point: 5.0,
-      lastRatedDate: '',
+      lastRatedDate: Date.now(),
     }
     setId(id + 1)
     setHotels([...hotels, hotel])
@@ -36,6 +36,7 @@ export default function App() {
     const hotel = hotels.find((hotel) => hotel.id === id)
     if (hotel.hotel_point < 9.8 && hotel.hotel_point > 0.9) {
       hotel.hotel_point = (hotel.hotel_point * 10 + 1) / 10
+      hotel.lastRatedDate = Date.now()
       setHotels([...hotels])
     }
   }
@@ -44,6 +45,7 @@ export default function App() {
     const hotel = hotels.find((hotel) => hotel.id === id)
     if (hotel.hotel_point < 10 && hotel.hotel_point > 1.2) {
       hotel.hotel_point = (hotel.hotel_point * 10 - 1) / 10
+      hotel.lastRatedDate = Date.now()
       setHotels([...hotels])
     }
   }
