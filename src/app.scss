@@ -164,7 +164,7 @@ img {
 }
 
 .popup-container {
-  display: none; //grid
+  display: grid; //grid
   position: absolute;
   align-content: space-between;
   justify-content: space-around;
@@ -198,8 +198,8 @@ img {
   align-items: flex-start;
   height: 60px;
   :first-child {
-    width: 2000px;
-    height: 80px;
+    width: 180px;
+    height: 60px;
     font-size: 18px;
     border-radius: 5px;
     background-color: rgb(48, 94, 202);
