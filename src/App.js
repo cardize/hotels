@@ -29,6 +29,26 @@ export default function App() {
     console.log(hotels)
   }
 
+  const increasePoint = (id) => {
+    const hotel = hotels.find((hotel) => hotel.id === id)
+    if (hotel.hotel_point < 9.8 && hotel.hotel_point > 0.9) {
+      hotel.hotel_point = (hotel.hotel_point * 10 + 1) / 10
+      setHotels([...hotels])
+    }
+  }
+
+  const decreasePoint = (id) => {
+    const hotel = hotels.find((hotel) => hotel.id === id)
+    if (hotel.hotel_point < 10 && hotel.hotel_point > 1.2) {
+      hotel.hotel_point = (hotel.hotel_point * 10 - 1) / 10
+      setHotels([...hotels])
+    }
+  }
+
+  const removeHotel = (id) => {
+    setHotels(hotels.filter((hotel) => hotel.id !== id))
+  }
+
   const descendingHotels = useMemo(() => {
     return hotels.sort(
       (a, b) => b.id - a.id || b.lastRatedDate - a.lastRatedDate,
@@ -120,7 +140,23 @@ export default function App() {
                 <div className="hotels" key={item.id}>
                   <div className="defaul-image">
                     <div className="remove-container">
-                      <button className="remove-button">+</button>
+                      <button
+                        className="remove-button"
+                        onClick={() => removeHotel(item.id)}
+                      >
+                        +
+                      </button>
+                      <div className="popup-container">
+                        <div className="confirmation-title">Oteli Sil </div>
+                        <div className="confirmation-text">
+                          <strong>{item.hotel_name}</strong>'i silmek
+                          istediğinizden <br /> emin misiniz?
+                        </div>
+                        <div className="button-container">
+                          <button className="delete-button">OTELİ SİL</button>
+                          <button className="cancel-button">VAZGEÇ</button>
+                        </div>
+                      </div>
                     </div>
                     <img
                       src="https://i.pinimg.com/564x/d3/9d/5d/d39d5dee8e4ef35e6068304b8433a9d5.jpg"
@@ -132,9 +168,19 @@ export default function App() {
                       <h3 className="hotel-name">{item.hotel_name}</h3>
                       <h3 className="hotel-point">{item.hotel_point} Puan</h3>
                     </div>
-                    <div className="button-container">
-                      <button className="button">PUAN ARTIR</button>
-                      <button className="button">PUAN AZALT</button>
+                    <div className="hotel-point-container">
+                      <button
+                        className="button"
+                        onClick={() => increasePoint(item.id)}
+                      >
+                        PUAN ARTIR
+                      </button>
+                      <button
+                        className="button"
+                        onClick={() => decreasePoint(item.id)}
+                      >
+                        PUAN AZALT
+                      </button>
                     </div>
                   </div>
                 </div>

@@ -101,7 +101,7 @@ h3 {
   border-radius: 3px;
 }
 
-.button-container {
+.hotel-point-container {
   margin-left: 1rem;
   display: flex;
   justify-content: center;
@@ -109,7 +109,7 @@ h3 {
   border-radius: 3px;
 }
 
-.button-container :last-child {
+.hotel-point-container :last-child {
   margin-left: 1rem;
 }
 
@@ -161,6 +161,63 @@ img {
   background-color: rgb(255, 0, 0);
   color: rgb(255, 255, 255);
   cursor: pointer;
+}
+
+.popup-container {
+  display: none; //grid
+  position: absolute;
+  align-content: space-between;
+  justify-content: space-around;
+  top: 0;
+  left: 0;
+  margin-top: -2.3rem;
+  margin-left: 0rem;
+  padding: 1rem;
+  width: 450px;
+  height: 300px;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  background-color: rgb(255, 255, 255);
+}
+
+.confirmation-text {
+  display: flex;
+  font-size: 25px;
+  justify-content: center;
+}
+
+.confirmation-title {
+  margin-top: 1rem;
+  display: flex;
+  font-size: 33px;
+}
+.button-container {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 60px;
+  :first-child {
+    width: 180px;
+    height: 60px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: rgb(48, 94, 202);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  :last-child {
+    margin-left: 1rem;
+    width: 180px;
+    height: 60px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: rgb(48, 94, 202);
+    border: 2px solid rgb(48, 94, 202);
+    cursor: pointer;
+  }
 }
 
 .plus-button {

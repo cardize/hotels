@@ -19,19 +19,19 @@
   },
   {
     "id": 4,
-    "hotel_name": "Hotel Grand",
+    "hotel_name": "Grand Hotel",
     "hotel_point": 7.2,
     "lastRatedDate": ""
   },
   {
     "id": 5,
-    "hotel_name": "Hotel Amour",
+    "hotel_name": "Amour Hotel",
     "hotel_point": 6.7,
     "lastRatedDate": ""
   },
   {
     "id": 6,
-    "hotel_name": "Hotel Royal",
+    "hotel_name": "Royal Hotel",
     "hotel_point": 6.7,
     "lastRatedDate": ""
   },
@@ -43,7 +43,7 @@
   },
   {
     "id": 8,
-    "hotel_name": "Hotel Armada",
+    "hotel_name": "Armada Hotel",
     "hotel_point": 6.4,
     "lastRatedDate": ""
   },
@@ -79,7 +79,7 @@
   },
   {
     "id": 14,
-    "hotel_name": "Hotel Angel",
+    "hotel_name": "Angel Hotel",
     "hotel_point": 5.8,
     "lastRatedDate": ""
   },
@@ -97,7 +97,7 @@
   },
   {
     "id": 17,
-    "hotel_name": "Hotel Maxx",
+    "hotel_name": "Maxx Hotel",
     "hotel_point": 5.5,
     "lastRatedDate": ""
   },
@@ -151,13 +151,13 @@
   },
   {
     "id": 26,
-    "hotel_name": "Hotel Armania",
+    "hotel_name": "Armania Hotel",
     "hotel_point": 4.6,
     "lastRatedDate": ""
   },
   {
     "id": 27,
-    "hotel_name": "Hotel Miami",
+    "hotel_name": "Miami Hotel",
     "hotel_point": 4.5,
     "lastRatedDate": ""
   },
@@ -175,7 +175,7 @@
   },
   {
     "id": 30,
-    "hotel_name": "Hotel Maar",
+    "hotel_name": "Maar Hotel",
     "hotel_point": 4.3,
     "lastRatedDate": ""
   }

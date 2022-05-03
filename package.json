@@ -5,6 +5,7 @@
   "dependencies": {
     "classnames": "^2.3.1",
     "react": "17.0.0",
+    "react-confirm-alert": "^2.8.0",
     "react-dom": "17.0.0",
     "sass": "^1.51.0",
     "scss": "^0.2.4"
