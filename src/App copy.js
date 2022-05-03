@@ -14,7 +14,6 @@ export default function App() {
   }
 
   const [hotels, setHotels] = useState(localHotels)
-  const [point, setPoint] = useState(5.0)
 
   useEffect(() => {
     localStorage.setItem('hotels', JSON.stringify(hotels))
@@ -148,12 +147,14 @@ export default function App() {
                         +
                       </button>
                       <div className="popup-container">
+                        <div className="confirmation-title">Oteli Sil </div>
                         <div className="confirmation-text">
-                          Do you really want to delete this task?
+                          <strong>{item.hotel_name}</strong>'i silmek
+                          istediğinizden <br /> emin misiniz?
                         </div>
                         <div className="button-container">
-                          <button className="cancel-button">Cancel</button>
-                          <button className="confirm-button">Delete</button>
+                          <button className="delete-button">OTELİ SİL</button>
+                          <button className="cancel-button">VAZGEÇ</button>
                         </div>
                       </div>
                     </div>
@@ -167,7 +168,7 @@ export default function App() {
                       <h3 className="hotel-name">{item.hotel_name}</h3>
                       <h3 className="hotel-point">{item.hotel_point} Puan</h3>
                     </div>
-                    <div className="button-container">
+                    <div className="hotel-point-container">
                       <button
                         className="button"
                         onClick={() => increasePoint(item.id)}

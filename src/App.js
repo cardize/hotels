@@ -4,9 +4,11 @@ import data from './data/mock-data.json'
 import './app.scss'
 
 let PageSize = 5
+const idRef = data.length
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState(1)
+  const [id, setId] = useState(idRef)
   let localHotels = JSON.parse(localStorage.getItem('hotels'))
   if (!localHotels) {
     localStorage.setItem('hotels', JSON.stringify(data))
@@ -21,12 +23,13 @@ export default function App() {
 
   const addHotel = () => {
     const hotel = {
-      id: hotels.length + 1,
+      id: id + 1,
       hotel_name: 'test',
       hotel_point: 5.0,
+      lastRatedDate: '',
     }
+    setId(id + 1)
     setHotels([...hotels, hotel])
-    console.log(hotels)
   }
 
   const increasePoint = (id) => {
@@ -46,7 +49,8 @@ export default function App() {
   }
 
   const removeHotel = (id) => {
-    setHotels(hotels.filter((hotel) => hotel.id !== id))
+    const newHotels = hotels.filter((hotel) => hotel.id !== id)
+    setHotels(newHotels)
   }
 
   const descendingHotels = useMemo(() => {
