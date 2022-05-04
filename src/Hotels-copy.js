@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useMemo } from 'react'
+import { NavLink } from 'react-router-dom'
 import Pagination from './Pagination'
 import data from './data/mock-data.json'
-import './app.scss'
+import './styles.scss'
 
 let PageSize = 5
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState(1)
+
   let localHotels = JSON.parse(localStorage.getItem('hotels'))
   if (!localHotels) {
     localStorage.setItem('hotels', JSON.stringify(data))
@@ -19,20 +21,11 @@ export default function App() {
     localStorage.setItem('hotels', JSON.stringify(hotels))
   }, [hotels])
 
-  const addHotel = () => {
-    const hotel = {
-      id: hotels.length + 1,
-      hotel_name: 'test',
-      hotel_point: 5.0,
-    }
-    setHotels([...hotels, hotel])
-    console.log(hotels)
-  }
-
   const increasePoint = (id) => {
     const hotel = hotels.find((hotel) => hotel.id === id)
     if (hotel.hotel_point < 9.8 && hotel.hotel_point > 0.9) {
       hotel.hotel_point = (hotel.hotel_point * 10 + 1) / 10
+      hotel.lastRatedDate = Date.now()
       setHotels([...hotels])
     }
   }
@@ -41,12 +34,14 @@ export default function App() {
     const hotel = hotels.find((hotel) => hotel.id === id)
     if (hotel.hotel_point < 10 && hotel.hotel_point > 1.2) {
       hotel.hotel_point = (hotel.hotel_point * 10 - 1) / 10
+      hotel.lastRatedDate = Date.now()
       setHotels([...hotels])
     }
   }
 
   const removeHotel = (id) => {
-    setHotels(hotels.filter((hotel) => hotel.id !== id))
+    const newHotels = hotels.filter((hotel) => hotel.id !== id)
+    setHotels(newHotels)
   }
 
   const descendingHotels = useMemo(() => {
@@ -65,9 +60,11 @@ export default function App() {
     <div>
       <div className="main-container">
         <div className="add-hotel">
-          <button className="plus-button" type="button" onClick={addHotel}>
-            +
-          </button>
+          <NavLink className="link" to="/addhotel">
+            <button className="plus-button" type="button">
+              +
+            </button>
+          </NavLink>
           <h2>OTEL EKLE</h2>
         </div>
         <div className="sort-hotel">
