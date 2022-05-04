@@ -8,6 +8,8 @@ let PageSize = 5
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState(1)
+  const [isRemoved, setIsRemoved] = useState(false)
+  const [requestedId, setRequestedId] = useState()
 
   let localHotels = JSON.parse(localStorage.getItem('hotels'))
   if (!localHotels) {
@@ -39,9 +41,15 @@ export default function App() {
     }
   }
 
-  const removeHotel = (id) => {
-    const newHotels = hotels.filter((hotel) => hotel.id !== id)
+  const requestDelete = (id) => {
+    setRequestedId(id)
+    setIsRemoved(true)
+  }
+
+  const removeHotel = () => {
+    const newHotels = hotels.filter((hotel) => hotel.id !== requestedId)
     setHotels(newHotels)
+    setIsRemoved(false)
   }
 
   const descendingHotels = useMemo(() => {
@@ -130,6 +138,34 @@ export default function App() {
             </ul>
           </div>
         </div>
+
+        {currentTableData.map((item) => {
+          return (
+            <div
+              key={item.id}
+              className="popup-container"
+              style={isRemoved ? { display: 'grid' } : { display: 'none' }}
+            >
+              <div className="confirmation-title">Oteli Sil </div>
+              <div className="confirmation-text">
+                <strong>{item.hotel_name}</strong>'i silmek istediğinizden{' '}
+                <br /> emin misiniz?
+              </div>
+              <div className="button-container">
+                <button className="delete-button" onClick={() => removeHotel()}>
+                  OTELİ SİL
+                </button>
+                <button
+                  className="cancel-button"
+                  onClick={() => setIsRemoved(false)}
+                >
+                  VAZGEÇ
+                </button>
+              </div>
+            </div>
+          )
+        })}
+
         <div className="table">
           <div className="hotels-container">
             {currentTableData.map((item) => {
@@ -139,21 +175,10 @@ export default function App() {
                     <div className="remove-container">
                       <button
                         className="remove-button"
-                        onClick={() => removeHotel(item.id)}
+                        onClick={() => requestDelete(item.id)}
                       >
                         +
                       </button>
-                      <div className="popup-container">
-                        <div className="confirmation-title">Oteli Sil </div>
-                        <div className="confirmation-text">
-                          <strong>{item.hotel_name}</strong>'i silmek
-                          istediğinizden <br /> emin misiniz?
-                        </div>
-                        <div className="button-container">
-                          <button className="delete-button">OTELİ SİL</button>
-                          <button className="cancel-button">VAZGEÇ</button>
-                        </div>
-                      </div>
                     </div>
                     <img
                       src="https://i.pinimg.com/564x/d3/9d/5d/d39d5dee8e4ef35e6068304b8433a9d5.jpg"
