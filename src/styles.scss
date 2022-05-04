@@ -164,7 +164,7 @@ img {
 }
 
 .popup-container {
-  display: grid; //grid
+  display: none; //grid
   position: absolute;
   align-content: space-between;
   justify-content: space-around;
@@ -338,4 +338,8 @@ img {
   to {
     transform: scaleY(0);
   }
+}
+
+.link {
+  text-decoration: none;
 }
