@@ -139,6 +139,10 @@ export default function App() {
           </div>
         </div>
 
+        <div
+          className="pop-up-back"
+          style={isRemoved ? { display: 'grid' } : { display: 'none' }}
+        ></div>
         {currentTableData.map((item) => {
           return (
             <div

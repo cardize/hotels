@@ -20,6 +20,8 @@ h3 {
 }
 
 .table {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -162,7 +164,15 @@ img {
   color: rgb(255, 255, 255);
   cursor: pointer;
 }
-
+.pop-up-back {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  height: 1200px;
+  width: 2400px;
+  background: rgb(140, 140, 140);
+  opacity: 50%;
+}
 .popup-container {
   position: fixed;
   align-content: space-between;
@@ -175,21 +185,21 @@ img {
   width: 450px;
   height: 280px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  background-attachment: none;
   background-color: rgb(255, 255, 255);
+  z-index: 1;
+  .confirmation-text {
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+  }
+  .confirmation-title {
+    margin-top: 1rem;
+    display: flex;
+    font-size: 33px;
+  }
 }
 
-.confirmation-text {
-  display: flex;
-  font-size: 25px;
-  justify-content: center;
-}
-
-.confirmation-title {
-  margin-top: 1rem;
-  display: flex;
-  font-size: 33px;
-}
 .button-container {
   margin-bottom: 1rem;
   display: flex;
