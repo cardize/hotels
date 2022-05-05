@@ -20,6 +20,10 @@ export default function App() {
 
   const [hotels, setHotels] = useState(localHotels)
 
+  const [isOrderByID, setIsOrderByID] = useState(true)
+  const [isOrderByPoint, setIsOrderByPoint] = useState(false)
+  const [isOrderByPointDesc, setIsOrderByPointDesc] = useState(true)
+
   useEffect(() => {
     localStorage.setItem('hotels', JSON.stringify(hotels))
   }, [hotels])
@@ -54,17 +58,71 @@ export default function App() {
     setIsRemoved(false)
   }
 
-  const descendingHotels = useMemo(() => {
+  const shortHotelsByPoint = (value) => {
+    console.log(value)
+    if (value === 'desc') {
+      setIsOrderByID(false)
+      setIsOrderByPoint(true)
+      setIsOrderByPointDesc(true)
+    } else if (value === 'asc') {
+      setIsOrderByID(false)
+      setIsOrderByPoint(true)
+      setIsOrderByPointDesc(false)
+    } else {
+      setIsOrderByID(true)
+      setIsOrderByPoint(false)
+      setIsOrderByPointDesc(false)
+    }
+  }
+
+  const orderByID = useMemo(() => {
+    console.log('orderByID', isOrderByID)
     return hotels.sort(
       (a, b) => b.id - a.id || b.lastRatedDate - a.lastRatedDate,
     )
   }, [hotels])
 
+  const orderByPoint = useMemo(() => {
+    console.log('orderByPointDesc', isOrderByPointDesc)
+    return hotels.sort((a, b) => {
+      let difference = b.hotel_point - a.hotel_point
+      difference = isOrderByPointDesc ? -difference : difference
+      console.log('difference', difference)
+      return difference || b.lastRatedDate - a.lastRatedDate
+    })
+  }, [hotels, isOrderByPoint, isOrderByPointDesc])
+
+  const orderedHotels = useMemo(() => {
+    console.log(isOrderByPoint)
+    if (isOrderByID) {
+      return orderByID
+    }
+    if (isOrderByPoint) {
+      return orderByPoint
+    }
+  }, [
+    hotels,
+    orderByID,
+    orderByPoint,
+    isOrderByID,
+    isOrderByPoint,
+    isOrderByPointDesc,
+  ])
+
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize
     const lastPageIndex = firstPageIndex + PageSize
-    return descendingHotels.slice(firstPageIndex, lastPageIndex) // hotels is the data from local storage
-  }, [descendingHotels, currentPage])
+    return orderedHotels.slice(firstPageIndex, lastPageIndex) // hotels is the data from local storage
+  }, [
+    orderedHotels,
+    orderByPoint,
+    isOrderByPoint,
+    isOrderByID,
+    orderByID,
+    hotels,
+    isOrderByPointDesc,
+    currentPage,
+  ])
 
   return (
     <div>
@@ -78,7 +136,10 @@ export default function App() {
           <h1>OTEL EKLE</h1>
         </div>
         <div className="sort-hotel">
-          <div className="select-box">
+          <div
+            className="select-box"
+            onChange={(event) => shortHotelsByPoint(event.target.value)}
+          >
             <div className="select-box__current" tabIndex="1">
               <div className="select-box__value">
                 <input
@@ -96,7 +157,7 @@ export default function App() {
                   className="select-box__input"
                   type="radio"
                   id="1"
-                  value="2"
+                  value="desc"
                   name="Cardize"
                 />
                 <p className="select-box__input-text">Artan (Puan)</p>
@@ -106,7 +167,7 @@ export default function App() {
                   className="select-box__input"
                   type="radio"
                   id="2"
-                  value="3"
+                  value="asc"
                   name="Cardize"
                 />
                 <p className="select-box__input-text">Azalan (Puan)</p>
@@ -217,7 +278,7 @@ export default function App() {
         <Pagination
           className="pagination-bar"
           currentPage={currentPage}
-          totalCount={descendingHotels.length}
+          totalCount={hotels.length}
           pageSize={PageSize}
           onPageChange={(page) => setCurrentPage(page)}
         />
