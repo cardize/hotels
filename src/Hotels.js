@@ -75,7 +75,7 @@ export default function App() {
               +
             </button>
           </NavLink>
-          <h2>OTEL EKLE</h2>
+          <h1>OTEL EKLE</h1>
         </div>
         <div className="sort-hotel">
           <div className="select-box">

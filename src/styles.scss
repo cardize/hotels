@@ -35,6 +35,8 @@ h3 {
   width: 432px;
   justify-content: flex-start;
   align-items: baseline;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
   :last-child {
     margin-left: 1rem;
   }
@@ -70,8 +72,8 @@ h3 {
   .hotel-name {
     margin-bottom: 1rem;
     font-size: 28px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
   }
 
   .info-container {
@@ -102,9 +104,8 @@ h3 {
   display: grid;
   align-content: space-around;
   justify-content: start;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: large;
-  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
   text-indent: 15px;
   height: 35px;
   width: 150px;
@@ -116,8 +117,8 @@ h3 {
 .hotel-name {
   margin-bottom: 1rem;
   font-size: 28px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
 }
 
 .info-container {
@@ -142,6 +143,8 @@ h3 {
   width: 108px;
   height: 40px;
   font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
   color: rgb(48, 94, 202);
   border-radius: 5px;
   background-color: #fff;
@@ -219,10 +222,14 @@ img {
       display: flex;
       font-size: 20px;
       justify-content: center;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: light300;
     }
     .confirmation-title {
       margin-top: 1rem;
       display: flex;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: regular500;
       font-size: 28px;
     }
   }
