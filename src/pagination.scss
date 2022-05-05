@@ -1,4 +1,5 @@
 .pagination-container {
+  height: 40px;
   margin-top: -1.5rem;
   margin-left: -2rem;
   display: flex;
@@ -6,7 +7,7 @@
 
   .pagination-item {
     padding: 0 12px;
-    height: 32px;
+    height: 40px;
     text-align: center;
     margin: auto 4px;
     color: rgba(0, 0, 0, 0.87);
@@ -16,7 +17,7 @@
     letter-spacing: 0.01071em;
     border-radius: 16px;
     line-height: 1.43;
-    font-size: 13px;
+    font-size: 16px;
     min-width: 32px;
 
     &.dots:hover {
@@ -28,7 +29,7 @@
     }
 
     &.selected {
-      font-size: 18px;
+      font-size: 22px;
       color: black;
     }
 
