@@ -10,6 +10,7 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState(1)
   const [isRemoved, setIsRemoved] = useState(false)
   const [requestedId, setRequestedId] = useState()
+  const [requestedName, setRequestedName] = useState()
 
   let localHotels = JSON.parse(localStorage.getItem('hotels'))
   if (!localHotels) {
@@ -41,9 +42,10 @@ export default function App() {
     }
   }
 
-  const requestDelete = (id) => {
+  const requestDelete = (id, hotel_name) => {
     setRequestedId(id)
     setIsRemoved(true)
+    setRequestedName(hotel_name)
   }
 
   const removeHotel = () => {
@@ -143,32 +145,30 @@ export default function App() {
           className="pop-up-back"
           style={isRemoved ? { display: 'grid' } : { display: 'none' }}
         ></div>
-        {currentTableData.map((item) => {
-          return (
-            <div
-              key={item.id}
-              className="popup-container"
-              style={isRemoved ? { display: 'grid' } : { display: 'none' }}
-            >
-              <div className="confirmation-title">Oteli Sil </div>
-              <div className="confirmation-text">
-                <strong>{item.hotel_name}</strong>'i silmek istediğinizden{' '}
-                <br /> emin misiniz?
-              </div>
-              <div className="button-container">
-                <button className="delete-button" onClick={() => removeHotel()}>
-                  OTELİ SİL
-                </button>
-                <button
-                  className="cancel-button"
-                  onClick={() => setIsRemoved(false)}
-                >
-                  VAZGEÇ
-                </button>
-              </div>
+
+        <div
+          className="popup-container"
+          style={isRemoved ? { display: 'grid' } : { display: 'none' }}
+        >
+          <div className="popup">
+            <div className="confirmation-title">Oteli Sil </div>
+            <div className="confirmation-text">
+              <strong>{requestedName}</strong>'i silmek istediğinizden <br />{' '}
+              emin misiniz?
             </div>
-          )
-        })}
+            <div className="button-container">
+              <button className="delete-button" onClick={() => removeHotel()}>
+                OTELİ SİL
+              </button>
+              <button
+                className="cancel-button"
+                onClick={() => setIsRemoved(false)}
+              >
+                VAZGEÇ
+              </button>
+            </div>
+          </div>
+        </div>
 
         <div className="table">
           <div className="hotels-container">
@@ -179,7 +179,7 @@ export default function App() {
                     <div className="remove-container">
                       <button
                         className="remove-button"
-                        onClick={() => requestDelete(item.id)}
+                        onClick={() => requestDelete(item.id, item.hotel_name)}
                       >
                         +
                       </button>
