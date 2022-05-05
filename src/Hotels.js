@@ -87,7 +87,7 @@ export default function App() {
       difference = isOrderByPointDesc ? -difference : difference
       return difference || b.lastRatedDate - a.lastRatedDate
     })
-  }, [isOrderByPoint, isOrderByPointDesc])
+  }, [hotels, isOrderByPoint, isOrderByPointDesc])
 
   const orderedHotels = useMemo(() => {
     if (isOrderByID) {
