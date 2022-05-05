@@ -20,7 +20,6 @@ h3 {
 }
 
 .table {
-  margin-top: 1rem;
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
@@ -30,10 +29,10 @@ h3 {
 }
 
 .add-hotel {
-  width: 432px;
   display: flex;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  width: 432px;
   justify-content: flex-start;
   align-items: baseline;
   :last-child {
@@ -67,6 +66,30 @@ h3 {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
   &:hover {
     background-color: rgba(239, 239, 239, 0.829);
+  }
+  .hotel-name {
+    margin-bottom: 1rem;
+    font-size: 28px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+  }
+
+  .info-container {
+    display: grid;
+    align-content: space-between;
+    border-radius: 3px;
+  }
+
+  .hotel-point-container {
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+  }
+
+  .hotel-point-container :last-child {
+    margin-left: 1rem;
   }
 }
 
@@ -116,8 +139,8 @@ h3 {
 }
 
 .button {
-  width: 100px;
-  height: 30px;
+  width: 108px;
+  height: 40px;
   font-size: 14px;
   color: rgb(48, 94, 202);
   border-radius: 5px;
@@ -175,35 +198,32 @@ img {
 }
 
 .popup-container {
+  margin: 0;
+  padding: 0;
   position: fixed;
-  margin: 0.5rem;
-  padding: 1rem;
-  width: 400px;
-  height: 280px;
+  width: 448px;
+  height: 288px;
   z-index: 1;
   .popup {
     display: grid;
     align-content: space-around;
     justify-content: space-around;
-    top: 0;
-    left: 0;
     margin-top: 10rem;
-    padding: 1rem;
-    width: 490px;
-    height: 280px;
+    width: 448px;
+    height: 288px;
     border-radius: 5px;
     background-attachment: none;
     background-color: rgb(255, 255, 255);
     z-index: 1;
     .confirmation-text {
       display: flex;
-      font-size: 25px;
+      font-size: 20px;
       justify-content: center;
     }
     .confirmation-title {
       margin-top: 1rem;
       display: flex;
-      font-size: 33px;
+      font-size: 28px;
     }
   }
 }
