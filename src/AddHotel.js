@@ -9,8 +9,8 @@ const AddHotel = () => {
     setHotelName(hotelName)
     const newHotels = JSON.parse(localStorage.getItem('hotels'))
     const hotel = {
-      hotel_name: hotelName,
       id: Date.now(),
+      hotel_name: hotelName,
       hotel_point: 5.0,
       lastRatedDate: Date.now(),
     }
