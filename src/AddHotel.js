@@ -38,7 +38,9 @@ const AddHotel = () => {
           <button
             className="add-button"
             onClick={() => addingHotel(hotelName)}
+            disabled={isAdded}
             style={{
+              cursor: isAdded ? '' : 'pointer',
               backgroundColor: isAdded
                 ? 'rgb(59, 212, 36)'
                 : 'rgb(48, 94, 202)',

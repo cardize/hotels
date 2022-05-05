@@ -180,31 +180,31 @@ img {
   padding: 1rem;
   width: 400px;
   height: 280px;
-}
-
-.popup {
-  display: grid;
-  align-content: space-around;
-  justify-content: space-around;
-  top: 0;
-  left: 0;
-  margin-top: 10rem;
-  padding: 1rem;
-  width: 490px;
-  height: 280px;
-  border-radius: 5px;
-  background-attachment: none;
-  background-color: rgb(255, 255, 255);
   z-index: 1;
-  .confirmation-text {
-    display: flex;
-    font-size: 25px;
-    justify-content: center;
-  }
-  .confirmation-title {
-    margin-top: 1rem;
-    display: flex;
-    font-size: 33px;
+  .popup {
+    display: grid;
+    align-content: space-around;
+    justify-content: space-around;
+    top: 0;
+    left: 0;
+    margin-top: 10rem;
+    padding: 1rem;
+    width: 490px;
+    height: 280px;
+    border-radius: 5px;
+    background-attachment: none;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    .confirmation-text {
+      display: flex;
+      font-size: 25px;
+      justify-content: center;
+    }
+    .confirmation-title {
+      margin-top: 1rem;
+      display: flex;
+      font-size: 33px;
+    }
   }
 }
 
@@ -386,7 +386,6 @@ img {
     border-radius: 5px;
     color: #fff;
     border: none;
-    cursor: pointer;
   }
   .add-button-confirmed {
     width: 180px;
