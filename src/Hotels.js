@@ -22,7 +22,7 @@ export default function App() {
 
   const [isOrderByID, setIsOrderByID] = useState(true)
   const [isOrderByPoint, setIsOrderByPoint] = useState(false)
-  const [isOrderByPointDesc, setIsOrderByPointDesc] = useState(true)
+  const [isOrderByPointDesc, setIsOrderByPointDesc] = useState(false)
 
   useEffect(() => {
     localStorage.setItem('hotels', JSON.stringify(hotels))
@@ -59,7 +59,6 @@ export default function App() {
   }
 
   const shortHotelsByPoint = (value) => {
-    console.log(value)
     if (value === 'desc') {
       setIsOrderByID(false)
       setIsOrderByPoint(true)
@@ -76,24 +75,21 @@ export default function App() {
   }
 
   const orderByID = useMemo(() => {
-    console.log('orderByID', isOrderByID)
-    return hotels.sort(
-      (a, b) => b.id - a.id || b.lastRatedDate - a.lastRatedDate,
-    )
-  }, [hotels])
+    return hotels.sort((a, b) => b.id - a.id)
+  }, [hotels, isOrderByID])
 
   const orderByPoint = useMemo(() => {
-    console.log('orderByPointDesc', isOrderByPointDesc)
+    if (isOrderByID) {
+      return
+    }
     return hotels.sort((a, b) => {
       let difference = b.hotel_point - a.hotel_point
       difference = isOrderByPointDesc ? -difference : difference
-      console.log('difference', difference)
       return difference || b.lastRatedDate - a.lastRatedDate
     })
-  }, [hotels, isOrderByPoint, isOrderByPointDesc])
+  }, [isOrderByPoint, isOrderByPointDesc])
 
   const orderedHotels = useMemo(() => {
-    console.log(isOrderByPoint)
     if (isOrderByID) {
       return orderByID
     }
@@ -278,7 +274,7 @@ export default function App() {
         <Pagination
           className="pagination-bar"
           currentPage={currentPage}
-          totalCount={hotels.length}
+          totalCount={orderedHotels.length}
           pageSize={PageSize}
           onPageChange={(page) => setCurrentPage(page)}
         />
